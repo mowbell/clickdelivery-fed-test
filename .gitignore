@@ -1,5 +1,6 @@
-node_modules/
-dist/
+node_modules/*
+!node_modules/semantic-ui-react/
+.dist/
 .idea/
 src/**/*.jsx
 __tests__/**/*.jsx
