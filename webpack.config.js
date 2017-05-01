@@ -2,6 +2,7 @@ const webpack         = require("webpack");
 const {resolve}       = require("path");
 const {CheckerPlugin} = require("awesome-typescript-loader")
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     resolve: {
@@ -42,10 +43,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 use:  ["style-loader", "css-loader?modules", "postcss-loader",],
+                exclude: /node_modules/
             },
             {
                 test:    /\.scss$/,
-                loaders: ["style-loader", "css-loader?modules", "postcss-loader", "sass-loader"]
+                loaders: ["style-loader", "css-loader?modules", "postcss-loader", "sass-loader"],
+                exclude: /node_modules/
             },
             {
                 test:    /\.(jpe?g|png|gif|svg)$/i,
@@ -60,6 +63,9 @@ module.exports = {
     plugins:     [
         new CheckerPlugin(),
         new StyleLintPlugin(),
+        new CopyWebpackPlugin([
+            {from:'../node_modules/semantic-ui-css', to:'semantic-ui'}
+        ]),
         new webpack.HotModuleReplacementPlugin(), // enable HMR globally
         new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
 
