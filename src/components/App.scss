@@ -1,9 +1,18 @@
-.app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid red;
 
-  p {
-    background-color: yellow;
+@import 'common';
+
+.app {
+  font-size: 1em;
+
+  #main-container {
+    margin-top: 5em;
+  }
+
+  .app-menu .item {
+    color: $principal_color;
+  }
+
+  .ui.segment {
+    border-radius: 0;
   }
 }
