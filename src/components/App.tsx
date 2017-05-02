@@ -26,6 +26,7 @@ export default class App extends React.Component<AppProps, AppState> {
     onAddedStatus(status:string){
         console.log(status)
         let post:IPost={
+            key:Math.random(),
             message:status,
             user:{
                 nombre:'Mauricio', 
@@ -45,8 +46,7 @@ export default class App extends React.Component<AppProps, AppState> {
         var postItems = [];
         var statuses=this.state.statuses
         statuses.map(function(post:IPost){
-            let message=post.message;
-            postItems.push(<Post message={message} />);
+            postItems.push(<Post key={post.key} post={post} />);
         })
         return <div className="app">
             <Menu className="app-menu" fixed="top">

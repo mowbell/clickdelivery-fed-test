@@ -6,6 +6,7 @@ import { IPost } from "./dto/Post";
 
 export let statuses: IPost[] = [    
     { 
+        key:Math.random(),
         message:"Post mensaje número 1",
         user:{
             nombre:"Suzana",
@@ -13,6 +14,7 @@ export let statuses: IPost[] = [
         } as IUser, 
         comments:[
             {
+                key:Math.random(),
                 message:"Comentario 1 Comentario 1 Comentario 1 Comentario 1 Comentario 1 ",
                 date:new Date(),
                 user:{
@@ -21,6 +23,7 @@ export let statuses: IPost[] = [
                 } as IUser
             } as IComment,
             {
+                key:Math.random(),
                 message:"Comentario 2 Comentario 2 Comentario 2 Comentario 2 Comentario 2 ",
                 date:new Date(),
                 user:{
@@ -29,6 +32,7 @@ export let statuses: IPost[] = [
                 } as IUser
             } as IComment,
             {
+                key:Math.random(),
                 message:"Comentario 3 Comentario 3 Comentario 3 Comentario 3 Comentario 3 ",
                 date:new Date(),
                 user:{
@@ -40,6 +44,7 @@ export let statuses: IPost[] = [
         date:new Date()  
     } as IPost,
     { 
+        key:Math.random(),
         message:"Post mensaje número 2",
         user:{
             nombre:"Rolando",
@@ -47,6 +52,7 @@ export let statuses: IPost[] = [
         } as IUser, 
         comments:[
             {
+                key:Math.random(),
                 message:"Comentario 1 Comentario 1 Comentario 1 Comentario 1 Comentario 1 ",
                 date:new Date(),
                 user:{
@@ -55,6 +61,7 @@ export let statuses: IPost[] = [
                 } as IUser
             } as IComment,
             {
+                key:Math.random(),
                 message:"Comentario 2 Comentario 2 Comentario 2 Comentario 2 Comentario 2 ",
                 date:new Date(),
                 user:{
@@ -66,6 +73,7 @@ export let statuses: IPost[] = [
         date:new Date()  
     } as IPost,
     { 
+        key:Math.random(),
         message:"Post mensaje número 3",
         user:{
             nombre:"Mario",
@@ -73,6 +81,7 @@ export let statuses: IPost[] = [
         } as IUser, 
         comments:[
             {
+                key:Math.random(),
                 message:"Comentario 1 Comentario 1 Comentario 1 Comentario 1 Comentario 1 ",
                 date:new Date(),
                 user:{
@@ -81,6 +90,7 @@ export let statuses: IPost[] = [
                 } as IUser
             } as IComment,
             {
+                key:Math.random(),
                 message:"Comentario 2 Comentario 2 Comentario 2 Comentario 2 Comentario 2 ",
                 date:new Date(),
                 user:{
@@ -89,6 +99,7 @@ export let statuses: IPost[] = [
                 } as IUser
             } as IComment,
             {
+                key:Math.random(),
                 message:"Comentario 3 Comentario 3 Comentario 3 Comentario 3 Comentario 3 ",
                 date:new Date(),
                 user:{
