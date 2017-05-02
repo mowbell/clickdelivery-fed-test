@@ -3,7 +3,7 @@ import Comment from "../comment/Comment";
 import CommentBox from "../comment-box/CommentBox";
 require("!style-loader!css-loader!sass-loader!./Post.scss");
 export interface PostProps {
-    message?:String
+    message:String
 }
 export class Post extends React.Component<PostProps, undefined> {
     public static defaultProps: Partial<PostProps> = {
