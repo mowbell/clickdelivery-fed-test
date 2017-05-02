@@ -45,8 +45,8 @@ export default class App extends React.Component<AppProps, AppState> {
     render() {
         var postItems = [];
         var statuses=this.state.statuses
-        statuses.map(function(post:IPost){
-            postItems.push(<Post key={post.key} post={post} />);
+        statuses.map(function(post:IPost, index){
+            postItems.push(<Post key={post.key} post={post} index={index}/>);
         })
         return <div className="app">
             <Menu className="app-menu" fixed="top">

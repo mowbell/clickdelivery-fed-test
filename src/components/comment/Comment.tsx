@@ -10,7 +10,9 @@ export default class Comment extends React.Component<CommentProps, undefined> {
     }
     render() {
         return <div className="comment ui segment secondary">
-            <p>{this.props.comment.message}</p>    
+            
+                <strong className="comment-user-label">{this.props.comment.user.nombre}</strong> &nbsp;
+                <span>{this.props.comment.message}</span>
             
         </div>;
     }
